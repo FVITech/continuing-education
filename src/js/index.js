@@ -5,7 +5,6 @@ import '../scss/index.scss'
 const $nav = $('.nav')
 
 $('body').click((e) => {
-    console.log( $(e.target) );
     if(!$(e.target).is('.nav-button, .nav-button .line')) {
         $nav.slideUp()
     }

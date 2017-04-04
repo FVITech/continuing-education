@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 /************************************************************
     ENTRY CONFIG
