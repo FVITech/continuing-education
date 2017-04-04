@@ -40,7 +40,7 @@ const config = function(env) {
         },
         module: {
             rules: [
-                {test: /\.js?x$/,
+                {test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: [{
                     loader: 'babel-loader',
@@ -84,7 +84,7 @@ const config = function(env) {
         devServer: {
             hot: true,
             contentBase: resolve(__dirname, 'dist'),
-            publicPath: '/'
+            publicPath: ''
         }
     }
 }
