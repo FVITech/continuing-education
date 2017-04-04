@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+$main-font: 'Lato', sans-serif;
+
 body {
     margin: 0;
+    font-family: $main-font;
 }
 
 * {
     box-sizing: border-box;
     position: relative;
+    transition: all 200ms;
+}
+
+h1 {
+    font-weight: 300;
+    text-transform: uppercase;
 }
