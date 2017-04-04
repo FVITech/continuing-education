@@ -103,7 +103,7 @@ const config = function(env) {
                 : '[name].js',
             chunkFilename: '[name].[chunkhash].js',
             path: resolve(__dirname, 'dist'),
-            publicPath: '/'
+            publicPath: ''
         },
         module: {
             rules: [

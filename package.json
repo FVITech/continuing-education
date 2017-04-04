@@ -6,7 +6,8 @@
     "license": "MIT",
     "scripts": {
         "dev": "webpack-dev-server --env=dev",
-        "prod": "rimraf dist && webpack -p --env=prod --progress --profile --colors"
+        "prod": "rimraf dist && webpack -p --env=prod --progress --profile --colors",
+        "gh-pages": "yarn prod && git subtree push --prefix dist origin gh-pages"
     },
     "devDependencies": {
         "autoprefixer": "^6.7.7",
