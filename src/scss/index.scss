@@ -1,5 +1,11 @@
+// Common between pages
 @import "./normalize.css";
 @import "./_base.scss";
 @import "./_helpers.scss";
-
 @import "./_header.scss";
+@import "./_partners.scss";
+@import "./_cta.scss";
+@import "./_footer.scss";
+
+// Pages
+@import "./home/_home.scss";

@@ -68,9 +68,21 @@ const plugins = (env) => {
             {from: resolve(__dirname, 'src', 'crossdomain.xml')},
             {from: resolve(__dirname, 'src', 'humans.txt')},
             {from: resolve(__dirname, 'src', 'robots.txt')},
-            {from: resolve(__dirname, './assets/medical-hero-mobile.jpg')},
-            {from: resolve(__dirname, './assets/medical-hero.jpg')},
-            {from: resolve(__dirname, './assets/fvi-full-white.png')}
+            {from: resolve(__dirname, 'assets', 'medical-hero-mobile.jpg')},
+            {from: resolve(__dirname, 'assets', 'medical-hero.jpg')},
+            {from: resolve(__dirname, 'assets', 'fvi-full-white.png')},
+            {from: resolve(__dirname, 'assets', 'cardiogram.svg')},
+            {from: resolve(__dirname, 'assets', 'heart.svg')},
+            {from: resolve(__dirname, 'assets', 'partners', 'coe.jpg')},
+            {from: resolve(__dirname, 'assets', 'partners', 'cssf.png')},
+            {from: resolve(__dirname, 'assets', 'partners', 'bon.png')},
+            {from: resolve(__dirname, 'assets', 'partners', 'fl-doe.jpg')},
+            {from: resolve(__dirname, 'assets', 'partners', 'fapsc.jpeg')},
+            {from: resolve(__dirname, 'assets', 'electrocardiogram.svg')},
+            {from: resolve(__dirname, 'assets', 'people', 'students.jpeg')},
+            {from: resolve(__dirname, 'assets', 'people', 'yanet.png')},
+            {from: resolve(__dirname, 'assets', 'people', 'frank.jpg')},
+            {from: resolve(__dirname, 'assets', 'people', 'tatiana.png')}
         ])
     ]
 
