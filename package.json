@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack-dev-server --env=dev",
         "prod": "rimraf dist && cross-env webpack -p --env=prod --progress --profile --colors && git add -A && git commit -m \"build bundle\"",
-        "gh-pages": "git push origin --delete gh-pages && git subtree push --prefix dist origin gh-pages && rimraf dist"
+        "gh-pages": "git push origin --delete gh-pages && git subtree push --prefix dist origin gh-pages && rimraf dist && git add -A && git commit -m \"delete dist\""
     },
     "devDependencies": {
         "autoprefixer": "^6.7.7",
