@@ -34,12 +34,23 @@ section.medical-coding-specialist {
             text-transform: uppercase;
             margin-left: 20px;
             margin-right: 20px;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation-name: slide-down-fade-in;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-delay: 900ms;
         }
     }
 
     .block {
         width: 100%;
         padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-30px);
+        animation-name: slide-down-fade-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
 
         @media all and (min-width: 768px) {
             width: 50%;
@@ -63,6 +74,7 @@ section.medical-coding-specialist {
         }
 
         &.left {
+            animation-delay: 1200ms;
 
             @media all and (min-width: 768px) {
                 padding-right: 30px;
@@ -78,6 +90,7 @@ section.medical-coding-specialist {
         }
 
         &.right {
+            animation-delay: 1500ms;
 
             @media all and (min-width: 768px) {
                 padding-left: 30px;

@@ -19,3 +19,12 @@
         transform: scaleX(1);
     }
 }
+
+@keyframes fade-in {
+    from {
+        opacity: 0.05;
+    }
+    to {
+        opacity: 1;
+    }
+}
