@@ -1,8 +1,8 @@
 .home.header {
-    background-image: url('../../assets/medical-hero-mobile.jpg');
+    background-image: url('../../images/medical-hero-mobile.jpg');
 
     @media all and (min-width: 480px) {
-        background-image: url('../../assets/medical-hero.jpg');
+        background-image: url('../../images/medical-hero.jpg');
     }
 
     .header-heading {

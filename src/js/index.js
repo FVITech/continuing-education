@@ -2,6 +2,17 @@ import $ from 'jquery'
 
 import '../scss/index.scss'
 
+// allow hot reload for html files by requiring them here
+if(process.env.NODE_ENV === 'development') {
+    require('../views/index.html')
+    require('../views/courses.html')
+    require('../views/courses/home-health-aide.html')
+    require('../views/courses/medical-assistant.html')
+    require('../views/courses/medical-coding-specialist.html')
+    require('../views/courses/patient-care-technician.html')
+    require('../views/courses/pharmacy-technician.html')
+}
+
 // Mobile Menu functionality
 function mobileMenu() {
     const $mainNav = $('.main-nav')

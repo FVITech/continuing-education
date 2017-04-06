@@ -2,6 +2,7 @@ import {
     HotModuleReplacementPlugin,
     HashedModuleIdsPlugin,
     NamedModulesPlugin,
+    DefinePlugin,
     optimize
 } from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
@@ -59,6 +60,11 @@ const plugins = (env) => {
                return module.context && module.context.indexOf('node_modules') !== -1;
             }
         }),
+        new DefinePlugin({
+            'process.env': {
+                'NODE_ENV': (env === 'dev') ? '"development"' : '"production"'
+            }
+        }),
         new optimize.CommonsChunkPlugin({
             name: 'manifest',
             minChunks: Infinity
@@ -69,7 +75,7 @@ const plugins = (env) => {
             filename: "chunk-manifest.json",
             manifestVariable: "webpackManifest"
         }),
-        new FaviconsPlugin(resolve(__dirname, 'assets', 'fvi-white-simple.png')),
+        new FaviconsPlugin(resolve(__dirname, 'images', 'fvi-white-simple.png')),
         new CopyPlugin([
             {from: resolve(__dirname, 'src', '.htaccess')},
             {from: resolve(__dirname, 'src', '404.html')},
@@ -81,7 +87,7 @@ const plugins = (env) => {
                 to: resolve(__dirname, 'dist', 'js')
             },
             {
-                from: resolve(__dirname, 'assets'),
+                from: resolve(__dirname, 'images'),
                 to: resolve(__dirname, 'dist', 'images'),
                 flatten: true
             }

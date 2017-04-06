@@ -77,7 +77,9 @@ const config = function(env) {
                             name: '[name].[ext]',
                             outputPath: 'images/'}},
                     {loader: 'image-webpack-loader', options: {}}
-                ]}
+                ]},
+                {test: /\.html$/,
+                use: ['raw-loader']}
             ]
         },
         resolve: {

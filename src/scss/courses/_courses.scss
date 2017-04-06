@@ -1,5 +1,5 @@
 .courses.header {
-    background-image: url('../../assets/laptop-desk-banner.jpg');
+    background-image: url('../../images/laptop-desk-banner.jpg');
 
     .header-heading {
         font-size: 45px;
@@ -38,19 +38,19 @@ section.courses {
         cursor: pointer;
 
         &:nth-of-type(1) .image {
-            background-image: url('../../assets/people/medical-coding.jpg');
+            background-image: url('../../images/people/medical-coding.jpg');
         }
         &:nth-of-type(2) .image {
-            background-image: url('../../assets/people/hha.jpg');
+            background-image: url('../../images/people/hha.jpg');
         }
         &:nth-of-type(3) .image {
-            background-image: url('../../assets/people/medical-assist.jpg');
+            background-image: url('../../images/people/medical-assist.jpg');
         }
         &:nth-of-type(4) .image {
-            background-image: url('../../assets/people/pct.jpg');
+            background-image: url('../../images/people/pct.jpg');
         }
         &:nth-of-type(5) .image {
-            background-image: url('../../assets/people/pharm-tech.jpg');
+            background-image: url('../../images/people/pharm-tech.jpg');
         }
 
         @media all and (min-width: 768px) {
