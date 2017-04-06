@@ -28,18 +28,20 @@
 
     &-heading {
         text-align: center;
-        letter-spacing: 5px;
-        line-height: 32px;
-        font-size: 24px;
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 1px;
         text-shadow: 1px 1px 6px rgba(0, 0, 0, .38);
         color: #fff;
-        margin-top: 25px;
+        margin-top: 60px;
         margin-bottom: 10px;
-
-        @media all and (min-width: 768px) {
-            font-size: 34px;
-            line-height: 45px;
-        }
+        padding: 0 20px;
+        opacity: 0.1;
+        transform: translateY(-30px);
+        animation-name: slide-down-fade-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 600ms;
     }
 
     &-subheading {
@@ -49,26 +51,12 @@
         letter-spacing: 1px;
         padding: 0 15px;
         line-height: 25px;
-    }
-}
-
-.home.header {
-    background-image: url('../../assets/medical-hero-mobile.jpg');
-
-    @media all and (min-width: 480px) {
-        background-image: url('../../assets/medical-hero.jpg');
-    }
-}
-
-.courses.header {
-    background-image: url('../../assets/design-desk-banner.jpg');
-
-    .header-heading {
-        font-size: 45px;
-        line-height: 50px;
-        letter-spacing: 1px;
-        text-transform: none;
-        margin-top: 60px;
+        opacity: 0.1;
+        transform: translateY(-30px);
+        animation-name: slide-down-fade-in;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 300ms;
     }
 }
 

@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "webpack-dev-server --env=dev",
         "prod": "rimraf dist && webpack -p --env=prod --progress --profile --colors",
-        "gh-pages": "git subtree push --prefix dist origin gh-pages"
+        "gh-pages": "yarn prod && git subtree push --prefix dist origin gh-pages && rimraf dist"
     },
     "devDependencies": {
         "autoprefixer": "^6.7.7",
@@ -33,6 +33,7 @@
         "webpack-dev-server": "^2.4.2"
     },
     "dependencies": {
+        "dom-fader": "^1.1.4",
         "jquery": "^3.2.1",
         "node-sass": "^4.5.2",
         "sass-loader": "^6.0.3",

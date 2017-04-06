@@ -1,3 +1,25 @@
+.home.header {
+    background-image: url('../../assets/medical-hero-mobile.jpg');
+
+    @media all and (min-width: 480px) {
+        background-image: url('../../assets/medical-hero.jpg');
+    }
+
+    .header-heading {
+        margin-top: 25px;
+        letter-spacing: 4px;
+        line-height: 36px;
+        font-size: 28px;
+        text-transform: uppercase;
+
+        @media all and (min-width: 768px) {
+            letter-spacing: 5px;
+            font-size: 34px;
+            line-height: 45px;
+        }
+    }
+}
+
 section.home {
     padding: 30px 0;
 

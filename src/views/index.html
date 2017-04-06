@@ -24,12 +24,12 @@
                             <a href="courses.html" class="nav-list-li-a">Courses</a>
                         </li>
                         <li class="nav-list-li">
-                            <a href="" class="nav-list-li-a">Contact</a>
+                            <a href="" class="contact-btn nav-list-li-a">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <h1 class="header-heading">CONTINUING EDUCATION &amp;<br>PROFESSIONAL DEVELOPMENT</h1>
+            <h1 class="header-heading slide-down-fade-in">CONTINUING EDUCATION &amp;<br>PROFESSIONAL DEVELOPMENT</h1>
             <p class="header-subheading">Start, refresh, or renew your skills for the workforce</p>
         </header>
 
@@ -49,12 +49,12 @@
         <section class="home">
             <div class="container">
                 <div class="block">
-                    <img src="cardiogram.svg" alt="cardiogram">
+                    <img data-aos="zoom-in-down" src="cardiogram.svg" alt="cardiogram">
                     <h3>Why FVI?</h3>
                     <p>FVI is here to help you reach your goals for a new future filled with professional satisfaction and rewards. We are ready to serve you by making your dreams a reality, and helping you reach your career goals.</p>
                 </div>
                 <div class="block">
-                    <img src="heart.svg" alt="heart">
+                    <img data-aos="zoom-in-down" src="heart.svg" alt="heart">
                     <h3>Our Campus</h3>
                     <p>Florida Vocational Institute is conveniently located inside the Mall of the Americas, on the 2nd floor.</p>
                     <br>
@@ -63,33 +63,33 @@
                     </address>
                 </div>
                 <div class="block">
-                    <img src="electrocardiogram.svg" alt="electrocardiogram">
+                    <img data-aos="zoom-in-down" src="electrocardiogram.svg" alt="electrocardiogram">
                     <h3>Have Questions?</h3>
                     <p>If you’re ready to get started or have questions, click the button below or call us.  We’re excited to help you get started on your training and help you obtain your new career!</p>
                 </div>
             </div>
-            <a class="contact-btn">Contact Us</a>
+            <a href="" class="contact-btn">Contact Us</a>
         </section>
 
         <section class="home">
             <h2>What Our Students Say About Us</h2>
             <div class="container">
                 <div class="block">
-                    <img src="yanet.png" alt="Yanet">
+                    <img data-aos="zoom-in-right" data-aos-offset="250" src="yanet.png" alt="Yanet">
                     <div class="text">
                         <h3>Yanet Gonzalez, Medical Assistant</h3>
                         <p>"FVI helped me to accommodate my externship hours around my busy schedule. Today, for more than a month, <strong>I am working as a Medical Assistant in a doctor office</strong>, in which I performed EKG, Phlebotomy, Data entry, Vital signs etc. It is a great opportunity to put into practice the good knowledge I acquired in School and they are happy with my work telling me that I am a good worker. My doctor is satisfied with my work and my patients respect and trust me."</p>
                     </div>
                 </div>
                 <div class="block">
-                    <img src="frank.jpg" alt="Frank">
+                    <img data-aos="zoom-in-right" data-aos-offset="250" src="frank.jpg" alt="Frank">
                     <div class="text">
                         <h3>Frank Veloz, Web Developer at Tango Mango</h3>
                         <p>"I’m graceful to FVI and all professors like Victor Moreno and Randy Ferrer for providing me with skills and abilities that helped <strong>open the doors to a world full of new opportunities</strong>. Coding literally changed my life and has become a powerful tool to grow and improve my life in several aspects. Excellence, knowledge, respect, dedication are the things you’ll find every step of the learning process."</p>
                     </div>
                 </div>
                 <div class="block">
-                    <img src="tatiana.png" alt="Tatiana">
+                    <img data-aos="zoom-in-right" data-aos-offset="250" src="tatiana.png" alt="Tatiana">
                     <div class="text">
                         <h3>Tatiana Torres, Patient Care Technician</h3>
                         <p>"When I started school I didn’t have the slightest idea of how much I would learn, I started the course without knowing anything about healthcare and the care that it requires. I did not want to know anything about being in hospitals, but as the time was passing, I became passionated about what I was learning. I had some excellent teachers who shared with me and my colleagues their knowledge and encouraged us learn. <strong>Now I work for Miami Cerebral Palsy as Direct Support Apprentice</strong> (DSA) applying what I learned, and I feel very happy."</p>
@@ -124,12 +124,30 @@
                             <a href="courses.html" class="nav-list-li-a">Courses</a>
                         </li>
                         <li class="nav-list-li">
-                            <a href="" class="nav-list-li-a">Contact</a>
+                            <a href="" class="contact-btn nav-list-li-a">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </footer>
+
+        <div class="contact-modal">
+            <div class="overlay"></div>
+            <span class="close">CLOSE &times;</span>
+            <h2>Get In Touch</h2>
+            <hr>
+            <p class="form-message">Thank you for your interest! Please fill out the form below if you have questions or would like to enroll in a course.</p>
+            <form id="contact-form">
+                <input type="text" name="dest_email" value="info@fvi.edu" style="display: none;">
+                <input type="text" name="full_name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Your message..."></textarea>
+                <input class="send-btn" type="submit" value="Send">
+            </form>
+            <div class="thank-you">Thank You! Your submission has been received.</div>
+        </div>
+
+    <script src="aos.js"></script>
 
     </body>
 </html>
