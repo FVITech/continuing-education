@@ -6,14 +6,14 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 ************************************************************/
 const entry = (env) => {
     let entryConfig = {
-        index: [
+        bundle: [
             resolve(__dirname, 'src/js/index.js')
         ]
     }
 
     if(env === 'dev') {
         entryConfig = {
-            index: [
+            bundle: [
                 resolve(__dirname, 'src/js/index.js'),
                 'webpack-dev-server/client?http://localhost:8080',
                 'webpack/hot/only-dev-server'
@@ -32,9 +32,9 @@ const config = function(env) {
         entry: entry(env),
         output: {
             filename: (env === 'prod')
-                ? '[name].[chunkhash].js'
-                : '[name].js',
-            chunkFilename: '[name].[chunkhash].js',
+                ? 'js/[name].[chunkhash].js'
+                : 'js/[name].js',
+            chunkFilename: 'js/[name].[chunkhash].js',
             path: resolve(__dirname, 'dist'),
             publicPath: ''
         },
@@ -59,7 +59,11 @@ const config = function(env) {
                         use: [
                             'css-loader',
                             {loader: 'postcss-loader',
-                            options: {plugins: () => [require('autoprefixer')]}},
+                            options: {plugins: () => [
+                                require('autoprefixer')({
+                                    browsers: ['last 8 versions']
+                                })
+                            ]}},
                             'sass-loader'
                         ]
                     })
@@ -68,7 +72,10 @@ const config = function(env) {
                 {test: /\.(jpe?g|png|gif|svg|ico)$/,
                 use: [
                     {loader: 'url-loader',
-                    options: {limit: 40000, name: '[name].[ext]'}},
+                        options: {
+                            limit: 40000,
+                            name: '[name].[ext]',
+                            outputPath: 'images/'}},
                     {loader: 'image-webpack-loader', options: {}}
                 ]}
             ]

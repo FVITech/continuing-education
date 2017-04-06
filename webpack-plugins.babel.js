@@ -76,10 +76,13 @@ const plugins = (env) => {
             {from: resolve(__dirname, 'src', 'crossdomain.xml')},
             {from: resolve(__dirname, 'src', 'humans.txt')},
             {from: resolve(__dirname, 'src', 'robots.txt')},
-            {from: resolve(__dirname, 'src', 'js', 'aos.js')},
+            {
+                from: resolve(__dirname, 'src', 'js', 'aos.js'),
+                to: resolve(__dirname, 'dist', 'js')
+            },
             {
                 from: resolve(__dirname, 'assets'),
-                to: resolve(__dirname, 'dist'),
+                to: resolve(__dirname, 'dist', 'images'),
                 flatten: true
             }
         ])
