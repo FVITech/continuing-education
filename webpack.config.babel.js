@@ -45,10 +45,7 @@ const config = function(env) {
             modules: [
                 resolve(__dirname, 'src'),
                 'node_modules'
-            ],
-            alias: {
-               handlebars: 'handlebars/dist/handlebars.min.js'
-            }
+            ]
         },
         plugins: require('./webpack-plugins.babel.js').default(env),
         devtool: (env === 'dev') ? 'inline-source-map' : false,
