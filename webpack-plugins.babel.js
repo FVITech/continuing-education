@@ -47,7 +47,7 @@ const plugins = (env) => {
         }),
         new HtmlPlugin({
             filename: 'test.html',
-            templatee: 'src/views/pages/test.handlebars'
+            template: 'src/views/pages/test.handlebars'
         }),
 
 

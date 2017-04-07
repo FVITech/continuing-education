@@ -55,7 +55,7 @@ function rules(env) {
             use: ['raw-loader']
         }, {
             test: /\.handlebars$/,
-            loader: 'handlebars-loader'
+            use: ['handlebars-loader']
         }
     ]
 }
