@@ -19,31 +19,35 @@ const plugins = (env) => {
         // PAGES
         new HtmlPlugin({
             filename: 'index.html',
-            template: 'src/views/index.html'
+            template: 'src/views/pages/index.html'
         }),
         new HtmlPlugin({
             filename: 'courses.html',
-            template: 'src/views/courses.html'
+            template: 'src/views/pages/courses.html'
         }),
         new HtmlPlugin({
             filename: 'home-health-aide.html',
-            template: 'src/views/courses/home-health-aide.html'
+            template: 'src/views/pages/home-health-aide.html'
         }),
         new HtmlPlugin({
             filename: 'medical-assistant.html',
-            template: 'src/views/courses/medical-assistant.html'
+            template: 'src/views/pages/medical-assistant.html'
         }),
         new HtmlPlugin({
             filename: 'medical-coding-specialist.html',
-            template: 'src/views/courses/medical-coding-specialist.html'
+            template: 'src/views/pages/medical-coding-specialist.html'
         }),
         new HtmlPlugin({
             filename: 'pharmacy-technician.html',
-            template: 'src/views/courses/pharmacy-technician.html'
+            template: 'src/views/pages/pharmacy-technician.html'
         }),
         new HtmlPlugin({
             filename: 'patient-care-technician.html',
-            template: 'src/views/courses/patient-care-technician.html'
+            template: 'src/views/pages/patient-care-technician.html'
+        }),
+        new HtmlPlugin({
+            filename: 'test.html',
+            templatee: 'src/views/pages/test.handlebars'
         }),
 
 

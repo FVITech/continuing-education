@@ -4,13 +4,13 @@ import '../scss/index.scss'
 
 // allow hot reload for html files by requiring them here
 if(process.env.NODE_ENV === 'development') {
-    require('../views/index.html')
-    require('../views/courses.html')
-    require('../views/courses/home-health-aide.html')
-    require('../views/courses/medical-assistant.html')
-    require('../views/courses/medical-coding-specialist.html')
-    require('../views/courses/patient-care-technician.html')
-    require('../views/courses/pharmacy-technician.html')
+    require('../views/pages/index.html')
+    require('../views/pages/courses.html')
+    require('../views/pages/home-health-aide.html')
+    require('../views/pages/medical-assistant.html')
+    require('../views/pages/medical-coding-specialist.html')
+    require('../views/pages/patient-care-technician.html')
+    require('../views/pages/pharmacy-technician.html')
 }
 
 // Mobile Menu functionality
