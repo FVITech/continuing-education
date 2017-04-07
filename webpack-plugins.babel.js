@@ -19,35 +19,31 @@ const plugins = (env) => {
         // PAGES
         new HtmlPlugin({
             filename: 'index.html',
-            template: 'src/views/pages/index.html'
+            template: 'src/views/pages/index.pug'
         }),
         new HtmlPlugin({
             filename: 'courses.html',
-            template: 'src/views/pages/courses.html'
+            template: 'src/views/pages/courses.pug'
         }),
         new HtmlPlugin({
             filename: 'home-health-aide.html',
-            template: 'src/views/pages/home-health-aide.html'
+            template: 'src/views/pages/home-health-aide.pug'
         }),
         new HtmlPlugin({
             filename: 'medical-assistant.html',
-            template: 'src/views/pages/medical-assistant.html'
+            template: 'src/views/pages/medical-assistant.pug'
         }),
         new HtmlPlugin({
             filename: 'medical-coding-specialist.html',
-            template: 'src/views/pages/medical-coding-specialist.html'
+            template: 'src/views/pages/medical-coding-specialist.pug'
         }),
         new HtmlPlugin({
             filename: 'pharmacy-technician.html',
-            template: 'src/views/pages/pharmacy-technician.html'
+            template: 'src/views/pages/pharmacy-technician.pug'
         }),
         new HtmlPlugin({
             filename: 'patient-care-technician.html',
-            template: 'src/views/pages/patient-care-technician.html'
-        }),
-        new HtmlPlugin({
-            filename: 'test.html',
-            template: 'src/views/pages/test.handlebars'
+            template: 'src/views/pages/patient-care-technician.pug'
         }),
 
 

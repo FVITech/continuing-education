@@ -1,0 +1,19 @@
+extends ../partials/layout
+
+block head
+    include ../partials/head
+    +makeHead('Home Health Aide')
+
+block content
+    include ../partials/header
+    +makeHeader('home-health-aide')
+        h1.header-heading Home Health Aide
+
+    section
+        .container
+            div
+                h2 Content goes here
+
+block footer
+    include ../partials/footer
+    +makeFooter()

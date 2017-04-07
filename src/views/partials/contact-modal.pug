@@ -1,0 +1,15 @@
+.contact-modal
+    .overlay
+    |
+    span.close CLOSE &times;
+    h2 Get In Touch
+    hr
+    p.form-message
+        | Thank you for your interest! Please fill out the form below if you have questions or would like to enroll in a course.
+    form#contact-form
+        input(type='text', name='dest_email', value='info@fvi.edu', style='display: none;')
+        input(type='text', name='full_name', placeholder='Name')
+        input(type='email', name='email', placeholder='Email')
+        textarea(name='message', placeholder='Your message...')
+        input.send-btn(type='submit', value='Send')
+    .thank-you Thank You! Your submission has been received.

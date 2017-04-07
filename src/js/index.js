@@ -4,13 +4,23 @@ import '../scss/index.scss'
 
 // allow hot reload for html files by requiring them here
 if(process.env.NODE_ENV === 'development') {
-    require('../views/pages/index.html')
-    require('../views/pages/courses.html')
-    require('../views/pages/home-health-aide.html')
-    require('../views/pages/medical-assistant.html')
-    require('../views/pages/medical-coding-specialist.html')
-    require('../views/pages/patient-care-technician.html')
-    require('../views/pages/pharmacy-technician.html')
+    // pages
+    require('../views/pages/index.pug')
+    require('../views/pages/courses.pug')
+    require('../views/pages/home-health-aide.pug')
+    require('../views/pages/medical-assistant.pug')
+    require('../views/pages/medical-coding-specialist.pug')
+    require('../views/pages/patient-care-technician.pug')
+    require('../views/pages/pharmacy-technician.pug')
+
+    // partials
+    require('../views/partials/footer.pug')
+    require('../views/partials/contact-modal.pug')
+    require('../views/partials/partners.pug')
+    require('../views/partials/cta.pug')
+    require('../views/partials/header.pug')
+    require('../views/partials/layout.pug')
+    require('../views/partials/head.pug')
 }
 
 // Mobile Menu functionality

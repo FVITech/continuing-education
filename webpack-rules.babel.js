@@ -54,8 +54,8 @@ function rules(env) {
             test: /\.html$/,
             use: ['raw-loader']
         }, {
-            test: /\.handlebars$/,
-            use: ['handlebars-loader']
+            test: /\.(pug)$/,
+            use: ['pug-loader']
         }
     ]
 }

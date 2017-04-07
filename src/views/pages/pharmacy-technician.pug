@@ -1,0 +1,19 @@
+extends ../partials/layout
+
+block head
+    include ../partials/head
+    +makeHead('Pharmacy Technician')
+
+block content
+    include ../partials/header
+    +makeHeader('pharmacy-technician')
+        h1.header-heading Pharmacy Technician
+
+    section
+        .container
+            div
+                h2 Content goes here
+
+block footer
+    include ../partials/footer
+    +makeFooter()

@@ -1,0 +1,24 @@
+mixin makeHeader(page)
+    if page === 'home'
+        - var homeActive = 'active'
+    if page === 'courses'
+        - var coursesActive = 'active'
+        
+    header.header(class=page)
+        .container
+            a(href='index.html')
+                img.header-logo(src='images/fvi-full-white.png', alt='Florida Vocational Institute logo')
+            .nav-button
+                span.line
+                span.line
+                span.line
+            nav.nav.main-nav
+                ul.nav-list
+                    li.nav-list-li
+                        a.nav-list-li-a(href='index.html', class=homeActive) Home
+                    li.nav-list-li
+                        a.nav-list-li-a(href='courses.html', class=coursesActive) Courses
+                    li.nav-list-li
+                        a.contact-btn.nav-list-li-a(href='') Contact
+        if block
+            block

@@ -1,0 +1,107 @@
+extends ../partials/layout
+
+block head
+    include ../partials/head
+    +makeHead('Medical Coding Specialist')
+
+block content
+    include ../partials/header
+    +makeHeader('medical-assistant')
+        h1.header-heading Medical Coding Specialist
+
+    section.medical-coding-specialist
+        .container
+            h2 Medical Coding Specialist Test Preparation Training Course
+        .container
+            .left.block
+                p
+                    strong WHAT
+                    |  The Nationally Registered Certified Coding Specialist (NRCCS) test preparation training is designed to teach the skills you need to pass the
+                    abbr(title='Nationally Registered Certified Coding Specialist') NRCCS
+                    |  exam from the National Association of Health Professionals (NAHP).
+                p
+                    strong WHEN
+                    |  Saturdays from 9:00AM - 2:00PM. Eight sessions.
+                p
+                    strong WHERE
+                    |  Florida Vocational Institute is conveniently located inside the Mall of the Americas, on the 2nd floor.
+                    address
+                        p
+                            | 7757 West Flagler Street
+                            br
+                            | Suite 220, Miami, FL 33144
+                p
+                    strong COST PLANS
+                ul.cost-plans-ul
+                    li $700 to pay in full
+                    li $150 initial payment, with 8 weekly payments as low as $52 per week
+                    li
+                        em Note:
+                        |  The study guide from
+                        abbr(title='National Association of Health Professionals') NAHP
+                        |  containing the bank of questions for the exam is included in the total cost of the training.
+            .right.block
+                a.contact-block(href='tel:1-305-665-1911') (305) 665-1911
+                p
+                    strong TRAINING SESSION OBJECTIVES
+                ul
+                    li Outline responsibilities of a medical biller and coder
+                    li
+                        | Learn the characteristics of the commercial and government insurance health plans, including
+                    li Medicare, Medicaid, HMO, PPO, POS
+                    li To understand the typical billing guidelines
+                    li To understand the Insurance Claim form
+                    li To learn the guidelines to coding diagnoses and procedures
+                    li To Understand the information included in ICD-10
+                p
+                    strong PREREQUISITES
+                    |  Candidates for the
+                    abbr(title='Nationally Registered Certified Coding Specialist') NRCCS
+                    |  exam preparation have to be working as Medical Assistant or have to be enrolled in a
+                    a(href='medical-assistant.html', title="FVI's Medical Assistant Program") Medical Assistant Program
+                    | . Students currently enrolled in a Medical Assistant program Have to pass the courses: Anatomy and Physiology, Medical Terminology and Office Procedures, in order to participate in the training sessions.
+    section.medical-coding-specialist
+        .container
+            h2 Syllabus
+        .container
+            .left.block
+                h3 Session 1 - Insurance Procedures and Reimbursement. Insurance Application.
+                ul
+                    li Health Insurance benefits
+                    li Medicare and Medicaid
+                    li Private Insurance guidelines: HMO, PPO, POS
+                h3 Session 2 -Medical Insurance Billing and Coding (MIBC)
+                ul
+                    li Medical Billing CMS 1500 form
+                    li Types of encounter forms
+                    li Superbill
+                h3 Session 3 - Introduction to Billing and Coding Procedures: ICD, CPT Books
+                ul
+                    li Introduction to ICD-10/ CPT
+                    li Three volumes ICD-CPT Books
+                    li Table of Drugs
+                    li External Causes section
+                h3 Session 4 - Introduction to Billing and Coding: 1500 form
+                ul
+                    li Introduction to Billing and Coding : ICD-10
+            .right.block
+                h3 Session 5 - CPT Modifiers and Place of Service. E/M Service
+                ul
+                    li Introduction to current procedures terminology (CPT)
+                    li CPT modifiers
+                    li Place of Service
+                    li Evaluation and Management
+                h3 Session 6 - Advance ICD -10
+                ul
+                    li Advance ICD-10
+                h3 Session 7 - Advance ICD-10, CPT coding
+                ul
+                    li Advance CPT
+                h3 Session 8 - General review.
+                ul
+                    li Study Guide
+
+
+block footer
+    include ../partials/footer
+    +makeFooter()

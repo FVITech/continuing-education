@@ -1,0 +1,19 @@
+extends ../partials/layout
+
+block head
+    include ../partials/head
+    +makeHead('Medical Assistant')
+
+block content
+    include ../partials/header
+    +makeHeader('medical-assistant')
+        h1.header-heading Medical Assistant
+
+    section
+        .container
+            div
+                h2 Content goes here
+
+block footer
+    include ../partials/footer
+    +makeFooter()
