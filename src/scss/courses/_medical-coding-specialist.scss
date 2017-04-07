@@ -1,5 +1,5 @@
 header.medical-coding-specialist {
-    background-image: url('../../images/design-desk-banner.jpg');
+    background-image: url('../../images/work-late-banner.jpg');
 }
 
 section.medical-coding-specialist {
@@ -88,12 +88,25 @@ section.medical-coding-specialist {
             padding: 20px;
             margin: 25px 0;
             background-color: $fvi-blue;
-            color: #fff;
             text-align: center;
-            color: #fff;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 20px;
+            cursor: default;
+
+            .phone-icon {
+                position: absolute;
+                left: 16px;
+                top: 15px;
+                height: 35px;
+                fill: #fff;
+                margin-right: 8px;
+                display: inline-block;
+            }
+
+            .text {
+                color: #fff;
+                font-weight: 700;
+                font-size: 20px;
+            }
         }
 
         &.left {
