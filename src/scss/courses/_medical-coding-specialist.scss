@@ -40,6 +40,15 @@ section.medical-coding-specialist {
             animation-duration: 1s;
             animation-fill-mode: forwards;
             animation-delay: 900ms;
+
+            @media all and (min-width: 768px) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        h3 {
+            margin: 25px 0;
         }
     }
 
@@ -71,6 +80,20 @@ section.medical-coding-specialist {
         ul {
             font-size: 18px;
             line-height: 25px;
+            margin-top: -20px;
+        }
+
+        .contact-block {
+            display: block;
+            padding: 20px;
+            margin: 25px 0;
+            background-color: $fvi-blue;
+            color: #fff;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
         }
 
         &.left {
@@ -78,10 +101,6 @@ section.medical-coding-specialist {
 
             @media all and (min-width: 768px) {
                 padding-right: 30px;
-            }
-
-            .cost-plans-ul {
-                margin-top: -20px;
             }
 
             address {
