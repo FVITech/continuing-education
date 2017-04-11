@@ -6,7 +6,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "cross-env NODE_ENV=development webpack-dev-server --env=dev --config ./webpack/index.babel.js",
-        "prod": "rimraf dist && cross-env webpack -p --env=prod --progress --profile --colors --config ./webpack/index.babel.js",
+        "prod": "rimraf dist && cross-env webpack -p --env=prod --progress --profile --colors --config ./webpack/index.babel.js && git add -A && git commit -m \"build\"",
         "dgh": "git push origin --delete gh-pages",
         "gh-pages": "git subtree push --prefix dist origin gh-pages && rimraf dist"
     },
