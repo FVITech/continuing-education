@@ -1,20 +1,16 @@
 import { resolve } from 'path'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
-/************************************************************
-    ENTRY CONFIG
-************************************************************/
 const entry = (env) => {
     let entryConfig = {
         bundle: [
-            resolve(__dirname, 'src/js/index.js')
+            resolve(__dirname, '..', 'src', 'js', 'index.js')
         ]
     }
 
     if(env === 'dev') {
         entryConfig = {
             bundle: [
-                resolve(__dirname, 'src/js/index.js'),
+                resolve(__dirname, '..', 'src', 'js', 'index.js'),
                 'webpack-dev-server/client?http://localhost:8080',
                 'webpack/hot/only-dev-server'
             ]
@@ -24,9 +20,6 @@ const entry = (env) => {
     return entryConfig
 }
 
-/************************************************************
-    MAIN CONFIG
-************************************************************/
 const config = function(env) {
     return {
         entry: entry(env),
@@ -39,22 +32,22 @@ const config = function(env) {
             publicPath: ''
         },
         module: {
-            rules: require('./webpack-rules.babel.js').default(env)
+            rules: require('./rules.babel.js').default(env)
         },
         resolve: {
             modules: [
-                resolve(__dirname, 'src'),
+                resolve(__dirname, '..', 'src'),
                 'node_modules'
             ]
         },
-        plugins: require('./webpack-plugins.babel.js').default(env),
+        plugins: require('./plugins.babel.js').default(env),
         devtool: (env === 'dev') ? 'inline-source-map' : false,
         devServer: {
             hot: true,
-            contentBase: resolve(__dirname, 'dist'),
+            contentBase: resolve(__dirname, '..', 'dist'),
             publicPath: ''
         }
     }
 }
 
-module.exports = config
+export default config

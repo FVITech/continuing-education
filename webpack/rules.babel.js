@@ -1,25 +1,22 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 function rules(env) {
-    return [
+
+    let config = [
         {
             test: /\.js$/,
             exclude: /(node_modules)/,
-            use: [
-                {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            [
-                                'env', {
-                                    modules: false
-                                }
-                            ]
-                        ],
-                        plugins: ['syntax-dynamic-import']
-                    }
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        ['env', {modules: false}]
+                    ],
+                    plugins: [
+                        'syntax-dynamic-import'
+                    ]
                 }
-            ]
+            }]
         }, {
             test: /\.scss$/,
             use: (env === 'prod')
@@ -37,7 +34,8 @@ function rules(env) {
                 : ['style-loader', 'css-loader', 'sass-loader']
         }, {
             test: /\.(jpe?g|png|gif|svg|ico)$/,
-            use: [
+            use: (env === 'prod')
+            ? [
                 {
                     loader: 'url-loader',
                     options: {
@@ -50,14 +48,33 @@ function rules(env) {
                     options: {}
                 }
             ]
+            : [
+                {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 40000,
+                        name: '[name].[ext]',
+                        outputPath: 'images/'
+                    }
+                }
+            ]
         }, {
-            test: /\.html$/,
-            use: ['raw-loader']
+            test: /\.(woff|woff2|eot|ttf)$/,
+            use: {
+                loader: 'url-loader',
+                options: {
+                    limit: 100000,
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }
         }, {
             test: /\.(pug)$/,
             use: ['pug-loader']
         }
     ]
+
+    return config
 }
 
 export default rules
