@@ -1,12 +1,9 @@
 .header {
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 350px;
-
-    @media all and (min-width: 768px) {
-        padding-top: 20px;
-    }
+    padding-top: 73px;
 
     .container {
 
@@ -17,13 +14,30 @@
         }
     }
 
+    .nav-container {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 5;
+
+        &.fixed {
+            background-color: rgba(40, 40, 40, .93);
+            padding: 0;
+            margin: 0;
+
+            @media all and (min-width: 768px) {
+                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+            }
+
+            .header-logo {
+                max-height: 50px;
+            }
+        }
+    }
+
     &-logo {
         max-height: 70px;
         margin-left: 8px;
-
-        @media all and (min-width: 768px) {
-            margin: 0;
-        }
     }
 
     &-heading {
@@ -104,7 +118,7 @@
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        background-color: #333;
+        background-color: rgba(40, 40, 40, .93);
         padding: 0;
         margin: 0;
 

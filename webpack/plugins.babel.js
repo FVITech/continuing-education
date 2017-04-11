@@ -15,13 +15,13 @@ import CopyPlugin from 'copy-webpack-plugin'
 import { resolve } from 'path'
 
 const pages = [
-    'index.pug',
-    'courses.pug',
-    'home-health-aide.pug',
-    'medical-assistant.pug',
-    'medical-coding-specialist.pug',
-    'pharmacy-technician.pug',
-    'patient-care-technician.pug'
+    'index',
+    'courses',
+    'home-health-aide',
+    'medical-assistant',
+    'medical-coding-specialist',
+    'pharmacy-technician',
+    'patient-care-technician'
 ]
 
 export default function plugins(env) {
@@ -41,14 +41,19 @@ export default function plugins(env) {
             {
                 from: resolve(__dirname, '..', 'src', 'js', 'aos.js'),
                 to: resolve(__dirname, '..', 'dist', 'js')
+            },
+            {
+                from: resolve(__dirname, '..', 'images'),
+                to: resolve(__dirname, '..', 'dist', 'images'),
+                flatten: true
             }
         ])
     ]
 
     const _pushPageToConfig = function(page) {
         config.push(new HtmlPlugin({
-            filename: page,
-            template: resolve(__dirname, '..', 'src', 'views', 'pages', page)
+            filename: `${page}.html`,
+            template: resolve(__dirname, '..', 'src', 'views', 'pages', `${page}.pug`)
         }))
     }
 

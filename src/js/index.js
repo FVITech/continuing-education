@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import throttle from 'lodash.throttle'
 
 import '../scss/index.scss'
 
@@ -23,12 +24,15 @@ if(process.env.NODE_ENV === 'development') {
     require('../views/partials/head.pug')
 }
 
+// cache DOM
+const $body = $('body')
+const $navContainer = $('.nav-container')
+const $mainNav = $('.main-nav')
+
 // Mobile Menu functionality
 function mobileMenu() {
-    const $mainNav = $('.main-nav')
-
     if(+window.innerWidth < 768) {
-        $('body').click((e) => {
+        $body.click((e) => {
             if(!$(e.target).is('.nav-button, .nav-button .line')) {
                 $mainNav.slideUp()
             }
@@ -41,6 +45,21 @@ function mobileMenu() {
         $('.nav-list-li-a').click(() => {
             $mainNav.slideUp()
         })
+    }
+}
+
+function fixMenu() {
+    if($body[0].scrollTop > 40) {
+        $navContainer.addClass('fixed')
+        if(+window.innerWidth < 768) {
+            $mainNav.css({top: '53px'})
+        }
+    }
+    else {
+        $navContainer.removeClass('fixed')
+        if(+window.innerWidth < 768) {
+            $mainNav.css({top: '73px'})
+        }
     }
 }
 
@@ -76,7 +95,8 @@ function contactForm() {
 }
 
 $(document).ready(() => {
-    AOS.init()
+    window.AOS.init()
     mobileMenu()
     contactForm()
+    $(document).scroll(throttle(fixMenu, 100))
 })

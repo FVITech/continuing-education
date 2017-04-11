@@ -64,13 +64,16 @@ section.home:first-of-type {
 
             &.right {
 
+                @media all and (min-width: 768px) {
+                    padding: 0 20px 20px 20px;
+                }
+
                 .students-image {
                     display: block;
                     width: 100%;
 
                     @media all and (min-width: 768px) {
                         border: 8px solid #fff;
-                        margin: 0 30px 30px 30px;
                         box-shadow: 0 8px 40px -10px #333;
                     }
                 }

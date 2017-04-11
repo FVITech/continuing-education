@@ -28,7 +28,7 @@ const config = function(env) {
                 ? 'js/[name].[chunkhash].js'
                 : 'js/[name].js',
             chunkFilename: 'js/[name].[chunkhash].js',
-            path: resolve(__dirname, 'dist'),
+            path: resolve(__dirname, '..', 'dist'),
             publicPath: ''
         },
         module: {
