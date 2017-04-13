@@ -101,8 +101,11 @@ function contactForm() {
 }
 
 // animations
+const supportPageOffset = window.pageXOffset !== undefined;
+const isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+const windowScroll = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+const windowHeight = null
 const animElements = [ homeIcon1, homeIcon2, homeIcon3, testimonial1, testimonial2, testimonial3 ]
-const windowHeight = $(window).height()
 const offset = 230
 
 function playAnimations() {
@@ -121,14 +124,13 @@ function onScroll() {
     playAnimations()
 }
 
-
 $(document).ready(() => {
-    homeIcon1.position = $('.benefits-icon.icon1').offset().top
-    homeIcon2.position = $('.benefits-icon.icon2').offset().top
-    homeIcon3.position = $('.benefits-icon.icon3').offset().top
-
     // wait for page height to be set
     setTimeout(function() {
+        windowHeight = $(window).height()
+        homeIcon1.position = $('.benefits-icon.icon1').offset().top
+        homeIcon2.position = $('.benefits-icon.icon2').offset().top
+        homeIcon3.position = $('.benefits-icon.icon3').offset().top
         testimonial1.position = $('.testimonial-img.img1').offset().top
         testimonial2.position = $('.testimonial-img.img2').offset().top
         testimonial3.position = $('.testimonial-img.img3').offset().top
