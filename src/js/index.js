@@ -28,6 +28,12 @@ if(process.env.NODE_ENV === 'development') {
 const $body = $('body')
 const $navContainer = $('.nav-container')
 const $mainNav = $('.main-nav')
+const homeIcon1 = { element: $('.benefits-icon.icon1'), position: null }
+const homeIcon2 = { element: $('.benefits-icon.icon2'), position: null }
+const homeIcon3 = { element: $('.benefits-icon.icon3'), position: null }
+const testimonial1 = { element: $('.testimonial-img.img1'), position: null }
+const testimonial2 = { element: $('.testimonial-img.img2'), position: null }
+const testimonial3 = { element: $('.testimonial-img.img3'), position: null }
 
 // Mobile Menu functionality
 function mobileMenu() {
@@ -94,9 +100,41 @@ function contactForm() {
     })
 }
 
+// animations
+const animElements = [ homeIcon1, homeIcon2, homeIcon3, testimonial1, testimonial2, testimonial3 ]
+const windowHeight = $(window).height()
+const offset = 230
+
+function playAnimations() {
+    animElements.forEach(el => {
+        const triggerPoint = el.position - windowHeight + offset
+        if(window.scrollY > triggerPoint)
+            el.element.addClass('visible')
+        else
+            el.element.removeClass('visible')
+    })
+}
+
+// scroll handler
+function onScroll() {
+    fixMenu()
+    playAnimations()
+}
+
+
 $(document).ready(() => {
-    window.AOS.init()
+    homeIcon1.position = $('.benefits-icon.icon1').offset().top
+    homeIcon2.position = $('.benefits-icon.icon2').offset().top
+    homeIcon3.position = $('.benefits-icon.icon3').offset().top
+
+    // wait for page height to be set
+    setTimeout(function() {
+        testimonial1.position = $('.testimonial-img.img1').offset().top
+        testimonial2.position = $('.testimonial-img.img2').offset().top
+        testimonial3.position = $('.testimonial-img.img3').offset().top
+    }, 1000)
+
     mobileMenu()
     contactForm()
-    $(document).scroll(throttle(fixMenu, 100))
+    $(document).scroll(throttle(onScroll, 100))
 })

@@ -39,10 +39,6 @@ export default function plugins(env) {
             {from: resolve(__dirname, '..', 'src', '.htaccess')},
             {from: resolve(__dirname, '..', 'src', '404.html')},
             {
-                from: resolve(__dirname, '..', 'src', 'js', 'aos.js'),
-                to: resolve(__dirname, '..', 'dist', 'js')
-            },
-            {
                 from: resolve(__dirname, '..', 'images'),
                 to: resolve(__dirname, '..', 'dist', 'images'),
                 flatten: true
